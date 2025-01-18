@@ -1,0 +1,36 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "langfarm-core"
+version = "0.0.1"
+description = "Langfarm Shared library - Core"
+authors = [ "chenlb <chenlbphoto@163.com>" ]
+packages = [
+  { include = "langfarm" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev.dependencies]
+black = "^24.10.0"
+flake8 = "^7.1.1"
+isort = "^5.13.2"
+pylint = "^3.3.3"
+pyright = "^1.1.392"
+pytest = "^8.3.4"
+pytest-cov = "^6.0.0"
+
+[tool.black]
+line-length = 100
+target-version = ['py39']
+
+[tool.pyright]
+
+[tool.pylint."messages control"]
+disable = "all"
+enable = ["empty-docstring", "missing-module-docstring", "missing-class-docstring", "missing-function-docstring"]
+ignore = ["setup.py", "__init__.py"]
+ignore-paths = ["tests"]
