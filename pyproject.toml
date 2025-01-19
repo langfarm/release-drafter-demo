@@ -1,21 +1,32 @@
-[tool.black]
-line-length = 100
-target-version = ['py39']
+[tool.poe.tasks]
+# run with eg `uv run poe fmt`
+fmt = "ruff format ${PWD}"
+lint = "ruff check --fix ${PWD}"
+check = "pyright ${PWD}"
+test = "pytest ${PWD}"
+# run all the above
+all = [ {ref="fmt"}, {ref="lint"}, {ref="check"}, {ref="test"} ]
 
-[tool.pylint."messages control"]
-ignore = ["setup.py", "__init__.py"]
-disable = "all"
-enable = [
-    "empty-docstring",
-    "missing-class-docstring",
-    "missing-function-docstring",
-    "missing-module-docstring"
+echo = "echo ${PWD}"
+
+"ci:fmt" = "ruff format --check ${PWD}"  # fail if not formatted
+"ci:lint" = "ruff check ${PWD}"
+
+[project]
+name = "langfarm"
+version = "0.0.1"
+description = "Langfarm base on Langfuse, is LLM Application OPS"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pyright >= 1.1.392",
+    "poethepoet>=0.32.0",
+    "pytest >= 8.3.4",
+    "ruff >= 0.8.5",
 ]
 
-[tool.isort]
-profile = "black"
-known_first_party = ["langfarm"]  # see package configuration below
-
-[tools.pyright]
-reportMissingTypeArgument = true  # Report generic classes used without type arguments
-strictListInference = true  # Use union types when inferring types of lists elements, instead of Any
+[tool.uv.workspace]
+members = ["libs/*", "apps/*"]
