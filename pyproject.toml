@@ -2,7 +2,7 @@
 # run with eg `uv run poe fmt`
 fmt = "ruff format ${PWD}"
 lint = "ruff check --fix ${PWD}"
-check = "pyright ${PWD}"
+check = "basedpyright ${PWD}"
 test = "pytest ${PWD}"
 # run all the above
 all = [ {ref="fmt"}, {ref="lint"}, {ref="check"}, {ref="test"} ]
