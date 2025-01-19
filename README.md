@@ -2,6 +2,10 @@
 
 ## 开发
 
+### monorepo 项目结构
+
+参数：https://github.com/carderne/postmodern-mono
+
 ### 准备环境
 
 ```bash
