@@ -12,6 +12,9 @@ echo = "echo ${PWD}"
 "ci:fmt" = "ruff format --check ${PWD}"  # fail if not formatted
 "ci:lint" = "ruff check ${PWD}"
 
+# server
+"server:start" = "uv run apps/server/main.py"
+
 [project]
 name = "langfarm"
 version = "0.0.1"
