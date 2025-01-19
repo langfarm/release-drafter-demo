@@ -31,5 +31,8 @@ dev = [
     "ruff >= 0.8.5",
 ]
 
+[tool.uv]
+package = false
+
 [tool.uv.workspace]
 members = ["libs/*", "apps/*"]
