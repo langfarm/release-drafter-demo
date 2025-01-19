@@ -1,23 +1,24 @@
 [project]
-name = "langfarm-core"
+name = "langfarm-tracing"
 version = "0.0.1"
-description = ""
+description = "Langfarm Tracing Server"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "tenacity >= 9.0.0",
+  "fastapi >= 0.115.6",
+  "langfarm-core",
 ]
 
 [dependency-groups]
 dev = [
-    "pyright>0",
+    "basedpyright>0",
     "poethepoet>0",
     "pytest>0",
     "ruff>0",
 ]
 
-[tool.uv]
-package = true
+[tool.uv.sources]
+langfarm-core = { workspace = true }
 
 [tool.pyright]
 venvPath = "../.."
