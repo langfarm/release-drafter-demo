@@ -1,0 +1,36 @@
+[project]
+name = "langfarm-server"
+version = "0.0.1"
+description = "Langfarm Server"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi >= 0.115.6",
+    "langfarm-core",
+    "uvicorn>=0.34.0",
+]
+
+[dependency-groups]
+dev = [
+    "basedpyright>0",
+    "poethepoet>0",
+    "pytest>0",
+    "ruff>0",
+]
+
+[tool.uv.sources]
+langfarm-core = { workspace = true }
+
+[[tool.uv.index]]
+url = "http://mirrors.aliyun.com/pypi/simple/"
+default = true
+
+[tool.pyright]
+venvPath = "../.."
+venv = ".venv"
+strict = ["**/*.py"]
+pythonVersion = "3.11"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
