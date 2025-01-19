@@ -33,18 +33,6 @@ wheels = [
 ]
 
 [[package]]
-name = "basedpyright"
-version = "1.24.0"
-source = { registry = "http://mirrors.aliyun.com/pypi/simple/" }
-dependencies = [
-    { name = "nodejs-wheel-binaries" },
-]
-sdist = { url = "http://mirrors.aliyun.com/pypi/packages/d9/9a/ddf789a403dcd27469f4e51f1e75d889cb3eb3034e87d198d01a1d7d3572/basedpyright-1.24.0.tar.gz", hash = "sha256:425919327db8662f1be718dafe06b1e168781f9728e59a9cf717cbb3380acec9" }
-wheels = [
-    { url = "http://mirrors.aliyun.com/pypi/packages/80/8f/71e63c95eacaca491546d522812c214bc37bc8ec79a71229efbc56961e2d/basedpyright-1.24.0-py3-none-any.whl", hash = "sha256:32ae77b2334dc9737c9220bcbc1aee98f76884be033bd5f4f50e5940fa16391d" },
-]
-
-[[package]]
 name = "click"
 version = "8.1.8"
 source = { registry = "http://mirrors.aliyun.com/pypi/simple/" }
@@ -113,8 +101,8 @@ source = { virtual = "." }
 
 [package.dev-dependencies]
 dev = [
-    { name = "basedpyright" },
     { name = "poethepoet" },
+    { name = "pyright" },
     { name = "pytest" },
     { name = "ruff" },
 ]
@@ -123,8 +111,8 @@ dev = [
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "basedpyright", specifier = ">=1.24.0" },
     { name = "poethepoet", specifier = ">=0.32.0" },
+    { name = "pyright", specifier = ">=1.1.392" },
     { name = "pytest", specifier = ">=8.3.4" },
     { name = "ruff", specifier = ">=0.8.5" },
 ]
@@ -139,8 +127,8 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
-    { name = "basedpyright" },
     { name = "poethepoet" },
+    { name = "pyright" },
     { name = "pytest" },
     { name = "ruff" },
 ]
@@ -150,8 +138,8 @@ requires-dist = [{ name = "tenacity", specifier = ">=9.0.0" }]
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "basedpyright", specifier = ">0" },
     { name = "poethepoet", specifier = ">0" },
+    { name = "pyright", specifier = ">0" },
     { name = "pytest", specifier = ">0" },
     { name = "ruff", specifier = ">0" },
 ]
@@ -168,8 +156,8 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
-    { name = "basedpyright" },
     { name = "poethepoet" },
+    { name = "pyright" },
     { name = "pytest" },
     { name = "ruff" },
 ]
@@ -183,8 +171,8 @@ requires-dist = [
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "basedpyright", specifier = ">0" },
     { name = "poethepoet", specifier = ">0" },
+    { name = "pyright", specifier = ">0" },
     { name = "pytest", specifier = ">0" },
     { name = "ruff", specifier = ">0" },
 ]
@@ -200,8 +188,8 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
-    { name = "basedpyright" },
     { name = "poethepoet" },
+    { name = "pyright" },
     { name = "pytest" },
     { name = "ruff" },
 ]
@@ -214,25 +202,19 @@ requires-dist = [
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "basedpyright", specifier = ">0" },
     { name = "poethepoet", specifier = ">0" },
+    { name = "pyright", specifier = ">0" },
     { name = "pytest", specifier = ">0" },
     { name = "ruff", specifier = ">0" },
 ]
 
 [[package]]
-name = "nodejs-wheel-binaries"
-version = "22.13.0"
+name = "nodeenv"
+version = "1.9.1"
 source = { registry = "http://mirrors.aliyun.com/pypi/simple/" }
-sdist = { url = "http://mirrors.aliyun.com/pypi/packages/96/6c/a6e728872c034df952d9bcd67a82da0ba1845df24117097448111896a4e8/nodejs_wheel_binaries-22.13.0.tar.gz", hash = "sha256:dd811e3e5b92f2e5d4eb236cdf1ff814c91d3d3533d90d63b4af41d07a8bb2fc" }
+sdist = { url = "http://mirrors.aliyun.com/pypi/packages/43/16/fc88b08840de0e0a72a2f9d8c6bae36be573e475a6326ae854bcc549fc45/nodeenv-1.9.1.tar.gz", hash = "sha256:6ec12890a2dab7946721edbfbcd91f3319c6ccc9aec47be7c7e6b7011ee6645f" }
 wheels = [
-    { url = "http://mirrors.aliyun.com/pypi/packages/67/5f/e5232e174dfd81e67f5ccfeb144f0952145cf44846ac7605acaf4a0e8d70/nodejs_wheel_binaries-22.13.0-py2.py3-none-macosx_11_0_arm64.whl", hash = "sha256:646ab3e65296de9c578db9a1dcfbca26386d2ead70a49008f75d02e960593b2f" },
-    { url = "http://mirrors.aliyun.com/pypi/packages/be/d9/e3f1f2f4576164474cb45ad3bfabf6128d740dbd31c5c98fcb95e61e9018/nodejs_wheel_binaries-22.13.0-py2.py3-none-macosx_11_0_x86_64.whl", hash = "sha256:38c689d556f428415a77655f70d2046ddbe11604039489f029b12f317042eaf4" },
-    { url = "http://mirrors.aliyun.com/pypi/packages/4e/e3/5b1e9476bdde955d5d24d969364a9f07149607b173d59c8a09653cbfdbbe/nodejs_wheel_binaries-22.13.0-py2.py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:61885cbcfff0a6d40353c8ea3d861ccb65dba7ce4b19f22427719aeeb35d42f1" },
-    { url = "http://mirrors.aliyun.com/pypi/packages/ed/ec/e6dad91654c30f8d1f7b19fd05fe87a436274e3c4d82ade98ae9621731fb/nodejs_wheel_binaries-22.13.0-py2.py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:e358439ff830db766006e6eeb85ababb94b8c41c7325c9eb1f873a52d3df3016" },
-    { url = "http://mirrors.aliyun.com/pypi/packages/bf/1c/4953049e13d58151a0db3c2e6a5bb1be18c66f3c672813b2bf0577040a1d/nodejs_wheel_binaries-22.13.0-py2.py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:1e26d39448cbb2969da10f5e62e53101591e4d6c6a6ae8d623c65f56bf28ce6b" },
-    { url = "http://mirrors.aliyun.com/pypi/packages/d0/a2/6f292b11c70a095ab9d84a7bb4bdfbece36818c925c011769ae1d4344ac3/nodejs_wheel_binaries-22.13.0-py2.py3-none-win_amd64.whl", hash = "sha256:cd9c6cdfd00ec48c55cbcd21a98af1fc9c2a18f039aede729de319346ed8675d" },
-    { url = "http://mirrors.aliyun.com/pypi/packages/3a/eb/4cf1c5e602c1f5071c08d5b0750ce5a1a3b857d3ee120bfa06d1a1167827/nodejs_wheel_binaries-22.13.0-py2.py3-none-win_arm64.whl", hash = "sha256:aa8af75d30c3132bc4e998126a78b11c269abc3060f1c7c697907299b21ae0e1" },
+    { url = "http://mirrors.aliyun.com/pypi/packages/d2/1d/1b658dbd2b9fa9c4c9f32accbfc0205d532c8c6194dc0f2a4c0428e7128a/nodeenv-1.9.1-py2.py3-none-any.whl", hash = "sha256:ba11c9782d29c27c70ffbdda2d7415098754709be8a7056d79a737cd901155c9" },
 ]
 
 [[package]]
@@ -340,6 +322,19 @@ wheels = [
     { url = "http://mirrors.aliyun.com/pypi/packages/a4/99/bddde3ddde76c03b65dfd5a66ab436c4e58ffc42927d4ff1198ffbf96f5f/pydantic_core-2.27.2-cp313-cp313-win32.whl", hash = "sha256:1ebaf1d0481914d004a573394f4be3a7616334be70261007e47c2a6fe7e50130" },
     { url = "http://mirrors.aliyun.com/pypi/packages/71/47/82b5e846e01b26ac6f1893d3c5f9f3a2eb6ba79be26eef0b759b4fe72946/pydantic_core-2.27.2-cp313-cp313-win_amd64.whl", hash = "sha256:953101387ecf2f5652883208769a79e48db18c6df442568a0b5ccd8c2723abee" },
     { url = "http://mirrors.aliyun.com/pypi/packages/51/b2/b2b50d5ecf21acf870190ae5d093602d95f66c9c31f9d5de6062eb329ad1/pydantic_core-2.27.2-cp313-cp313-win_arm64.whl", hash = "sha256:ac4dbfd1691affb8f48c2c13241a2e3b60ff23247cbcf981759c768b6633cf8b" },
+]
+
+[[package]]
+name = "pyright"
+version = "1.1.392.post0"
+source = { registry = "http://mirrors.aliyun.com/pypi/simple/" }
+dependencies = [
+    { name = "nodeenv" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "http://mirrors.aliyun.com/pypi/packages/66/df/3c6f6b08fba7ccf49b114dfc4bb33e25c299883fd763f93fad47ef8bc58d/pyright-1.1.392.post0.tar.gz", hash = "sha256:3b7f88de74a28dcfa90c7d90c782b6569a48c2be5f9d4add38472bdaac247ebd" }
+wheels = [
+    { url = "http://mirrors.aliyun.com/pypi/packages/e7/b1/a18de17f40e4f61ca58856b9ef9b0febf74ff88978c3f7776f910071f567/pyright-1.1.392.post0-py3-none-any.whl", hash = "sha256:252f84458a46fa2f0fd4e2f91fc74f50b9ca52c757062e93f6c250c0d8329eb2" },
 ]
 
 [[package]]

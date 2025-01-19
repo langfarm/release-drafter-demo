@@ -11,7 +11,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    "basedpyright>0",
+    "pyright>0",
     "poethepoet>0",
     "pytest>0",
     "ruff>0",
